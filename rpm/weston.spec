@@ -122,7 +122,6 @@ cp %{SOURCE4} %{_builddir}/%{name}-%{version}/%{name}/include/linux
 #%%meson_test
 
 %files
-%config(noreplace) %{_sysconfdir}/pam.d/weston-remote-access
 %license COPYING
 %doc README.md
 %{_bindir}/weston
