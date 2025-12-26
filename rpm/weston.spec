@@ -35,7 +35,6 @@ BuildRequires:  pkgconfig(libevdev)
 BuildRequires:  pkgconfig(libinput) >= 0.8.0
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:  pkgconfig(libseat) >= 0.6.1
-BuildRequires:  pkgconfig(libspa-0.2)
 BuildRequires:  pkgconfig(libsystemd) >= 209
 BuildRequires:  pkgconfig(libudev) >= 136
 # # libunwind available only on selected arches
@@ -105,6 +104,7 @@ Common headers for weston
     -Dbackend-rdp=false \
     -Dbackend-vnc=false \
     -Dbackend-pipewire=false \
+    -Dpipewire=false \
     -Dbackend-drm-screencast-vaapi=false \
     -Dxwayland=false
 %meson_build
