@@ -21,7 +21,6 @@ BuildRequires:  pkgconfig(cairo) >= 1.10.0
 BuildRequires:  pkgconfig(colord) >= 0.1.27
 BuildRequires:  pkgconfig(dbus-1) >= 1.6
 BuildRequires:  pkgconfig(egl)
-BuildRequires:  pkgconfig(freerdp3)
 BuildRequires:  pkgconfig(gbm) >= 10.2
 BuildRequires:  pkgconfig(glesv2)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -108,6 +107,7 @@ Common headers for weston
 %build
 %meson \
     -Dbackend-x11=false \
+    -Dbackend-rdp=false \
     -Dxwayland=false
 %meson_build
 
