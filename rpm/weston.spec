@@ -34,7 +34,6 @@ BuildRequires:  pkgconfig(libdisplay-info) >= 0.1.1
 BuildRequires:  pkgconfig(libdrm) >= 2.4.109
 BuildRequires:  pkgconfig(libevdev)
 BuildRequires:  pkgconfig(libinput) >= 0.8.0
-BuildRequires:  pkgconfig(libpipewire-0.3)
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:  pkgconfig(libseat) >= 0.6.1
 BuildRequires:  pkgconfig(libspa-0.2)
@@ -106,6 +105,7 @@ Common headers for weston
     -Dbackend-x11=false \
     -Dbackend-rdp=false \
     -Dbackend-vnc=false \
+    -Dbackend-pipewire=false \
     -Dbackend-drm-screencast-vaapi=false \
     -Dxwayland=false
 %meson_build
@@ -154,8 +154,6 @@ Common headers for weston
 %{_libdir}/libweston-%{apiver}/drm-backend.so
 %{_libdir}/libweston-%{apiver}/gl-renderer.so
 %{_libdir}/libweston-%{apiver}/headless-backend.so
-%{_libdir}/libweston-%{apiver}/pipewire-backend.so
-%{_libdir}/libweston-%{apiver}/pipewire-plugin.so
 %{_libdir}/libweston-%{apiver}/remoting-plugin.so
 %{_libdir}/libweston-%{apiver}/wayland-backend.so
 %{_libdir}/libweston-%{apiver}.so.0*
