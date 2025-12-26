@@ -9,6 +9,8 @@ License:        MIT and CC-BY-SA-3.0
 URL:            http://wayland.freedesktop.org/
 Source0:        https://gitlab.freedesktop.org/wayland/%{name}/-/releases/%{version}/downloads/%{name}-%{version}.tar.gz
 
+Source4:    input-event-codes.h
+
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  glib2-devel
@@ -97,6 +99,9 @@ Common headers for weston
 
 %prep
 %autosetup -p1 -n %{name}-%{version}/%{name}
+
+mkdir -p %{_builddir}/%{name}-%{version}/%{name}/include/linux
+cp %{SOURCE4} %{_builddir}/%{name}-%{version}/%{name}/include/linux
 
 %build
 %meson \
