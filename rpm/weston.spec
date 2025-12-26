@@ -44,8 +44,6 @@ BuildRequires:  pkgconfig(libudev) >= 136
 %ifarch %{arm} aarch64 hppa ia64 mips ppc %{power64} %{ix86} x86_64
 BuildRequires:  libunwind-devel
 %endif
-BuildRequires:  pkgconfig(libva) >= 0.34.0
-BuildRequires:  pkgconfig(libva-drm) >= 0.34.0
 BuildRequires:  pkgconfig(libwebp)
 BuildRequires:  pkgconfig(libxml-2.0) >= 2.6
 BuildRequires:  pkgconfig(mtdev) >= 1.1.0
@@ -108,6 +106,7 @@ Common headers for weston
     -Dbackend-x11=false \
     -Dbackend-rdp=false \
     -Dbackend-vnc=false \
+    -Dbackend-drm-screencast-vaapi=false \
     -Dxwayland=false
 %meson_build
 
