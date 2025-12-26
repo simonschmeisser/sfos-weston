@@ -60,15 +60,6 @@ BuildRequires:  pkgconfig(wayland-egl)
 BuildRequires:  pkgconfig(wayland-protocols) >= 1.33
 BuildRequires:  pkgconfig(wayland-scanner)
 BuildRequires:  pkgconfig(wayland-server) >= 1.22
-BuildRequires:  pkgconfig(x11)
-BuildRequires:  pkgconfig(x11-xcb)
-BuildRequires:  pkgconfig(xcb)
-BuildRequires:  pkgconfig(xcb-cursor)
-BuildRequires:  pkgconfig(xcb-composite)
-BuildRequires:  pkgconfig(xcb-shm)
-BuildRequires:  pkgconfig(xcb-xfixes)
-BuildRequires:  pkgconfig(xcb-xkb)
-BuildRequires:  pkgconfig(xcursor)
 BuildRequires:  pkgconfig(xkbcommon)
 
 Conflicts:      %{name} < 13.0.0-4
@@ -116,7 +107,9 @@ Common headers for weston
 %autosetup -p1 -n %{name}-%{version}/%{name}
 
 %build
-%meson
+%meson \
+    -Dbackend-x11=false \
+    -Dxwayland=false
 %meson_build
 
 %install
@@ -169,8 +162,6 @@ Common headers for weston
 %{_libdir}/libweston-%{apiver}/rdp-backend.so
 %{_libdir}/libweston-%{apiver}/vnc-backend.so
 %{_libdir}/libweston-%{apiver}/wayland-backend.so
-%{_libdir}/libweston-%{apiver}/x11-backend.so
-%{_libdir}/libweston-%{apiver}/xwayland.so
 %{_libdir}/libweston-%{apiver}.so.0*
 
 %files demo
