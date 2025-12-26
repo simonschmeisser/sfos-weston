@@ -18,7 +18,6 @@ BuildRequires:  pam-devel
 BuildRequires:  meson
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(cairo) >= 1.10.0
-BuildRequires:  pkgconfig(colord) >= 0.1.27
 BuildRequires:  pkgconfig(dbus-1) >= 1.6
 BuildRequires:  pkgconfig(egl)
 BuildRequires:  pkgconfig(gbm) >= 10.2
