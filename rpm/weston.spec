@@ -7,7 +7,7 @@ Summary:        Reference compositor for Wayland
 
 License:        MIT and CC-BY-SA-3.0
 URL:            http://wayland.freedesktop.org/
-Source0:        https://gitlab.freedesktop.org/wayland/%{name}/-/releases/%{version}/downloads/%{name}-%{version}.tar.xz
+Source0:        https://gitlab.freedesktop.org/wayland/%{name}/-/releases/%{version}/downloads/%{name}-%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
@@ -113,7 +113,7 @@ Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 Common headers for weston
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-%{version}/%{name}
 
 %build
 %meson
