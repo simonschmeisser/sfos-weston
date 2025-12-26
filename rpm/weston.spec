@@ -39,10 +39,10 @@ BuildRequires:  pkgconfig(libseat) >= 0.6.1
 BuildRequires:  pkgconfig(libspa-0.2)
 BuildRequires:  pkgconfig(libsystemd) >= 209
 BuildRequires:  pkgconfig(libudev) >= 136
-# libunwind available only on selected arches
-%ifarch %{arm} aarch64 hppa ia64 mips ppc %{power64} %{ix86} x86_64
-BuildRequires:  libunwind-devel
-%endif
+# # libunwind available only on selected arches
+# %ifarch %{arm} aarch64 hppa ia64 mips ppc %{power64} %{ix86} x86_64
+# BuildRequires:  libunwind-devel
+# %endif
 BuildRequires:  pkgconfig(libwebp)
 BuildRequires:  pkgconfig(libxml-2.0) >= 2.6
 BuildRequires:  pkgconfig(mtdev) >= 1.1.0
