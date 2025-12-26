@@ -59,7 +59,6 @@ BuildRequires:  pkgconfig(xkbcommon)
 Conflicts:      %{name} < 13.0.0-4
 Obsoletes:      %{name} < 13.0.0-4
 Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
-Requires:       mesa-dri-drivers
 
 %description
 Weston is the reference wayland compositor that can run on KMS, under X11
